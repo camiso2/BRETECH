@@ -5,6 +5,7 @@ Sistema desarrollado
 
 El sistema busca el registro de productos según preferencias del usuario con fotografía, ventas a clientes  y facturacíon
 
+
 Utilidades
 
 * cantidad Productos eliminados
@@ -22,6 +23,7 @@ Utilidades
 Tecnologías Usadas
 * back-end  : PHP->Laravel 5.6
 * front-end : HTML5, CSS3, Bootstrap 4, js puro, JQuery, axios, vue.js
+* tiempo de desarrollo 26 horas
 
 
 LIBRERIAS EXTERNAS
