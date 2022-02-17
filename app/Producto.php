@@ -23,6 +23,27 @@ class Producto extends Model
         "IVA",
     ];
 
+     /**
+     * senables/disbled product
+     *
+     * @param $request
+     */
+    public function EnableDisableProduct($request)
+    {
+        $product = Producto::where('id', $request->id)->first();
+        if (is_null($product->state)) {
+            $data = Producto::where('id', $request->id)->update(['state' => Carbon::now()]);
+        } else {
+            $data = Producto::where('id', $request->id)->update(['state' => null]);
+        }
+        if($data){
+            $response = StatusController::successfulMessage(200, 'Successfully created', true, 0, $data);
+        }else{
+            $response = StatusController::notFoundMessage();
+        }
+        return $response;
+    }
+
 
      /**
      * simulates delete product

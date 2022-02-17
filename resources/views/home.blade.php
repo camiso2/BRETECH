@@ -292,16 +292,12 @@
                                 type:  'post',
                                 beforeSend: function () { },
                                 success:  function (response) {
-                                    if(response.success != null){
-                                        $("#update"+id).removeClass('btn-default').addClass('btn-success').find('span').text('Deshabilitar');
-                                        $("#habilitado"+id).text('Producto Habilitado').css("color", "#5bc0de").css("font-weight", "bold");
-
-                                    }else{
-                                        $("#update"+id).removeClass('btn-success').addClass('btn-default').find('span').text('Habilitar ');
-                                        $("#habilitado"+id).text('Producto desabilitado').css("color", "#d9534f").css("font-weight", "bold");
-
+                                    console.log("respuest delete:."+response.success);
+                                    if(response.success){
+                                        location.reload();
+                                      /*  $("#update"+id).removeClass('btn-default').addClass('btn-success').find('span').text('Deshabilitar');
+                                        $("#habilitado"+id).text('Producto Habilitado').css("color", "#5bc0de").css("font-weight", "bold");*/
                                     }
-                                   // location.reload();
                                 },
                                 error:function(){
                                     Swal.fire({
@@ -344,10 +340,10 @@
                                 type:  'post',
                                 beforeSend: function () { },
                                 success:  function (response) {
-                                    console.log("respuest delete:."+response.success);
-                                   // var request =JSON.parse(response);
+                                    //console.log("respuest delete:."+response.success);
                                    if(response.success){
                                     $("#tr"+id).hide("slow");
+                                    location.reload();
                                    }else{
                                     Swal.fire({
                                         icon: 'error',

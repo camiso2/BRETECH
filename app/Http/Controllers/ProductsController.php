@@ -99,13 +99,9 @@ class ProductsController extends Controller
     public function update(Request $request)
     {
         try {
-            $product = Producto::where('id', $request->id)->first();
-            if (is_null($product->state)) {
-                Producto::where('id', $request->id)->update(['state' => Carbon::now()]);
-            } else {
-                Producto::where('id', $request->id)->update(['state' => null]);
-            }
-            return response()->json(['success' => $product->state]);
+            $product         = new Producto();
+            $response        = $product->EnableDisableProduct($request);
+            return response()->json($response);
         } catch (\Exception $e) {
             Log::info("Error enable/desable Product:: " . $e->getMessage());
             return $e->getMessage();
