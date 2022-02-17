@@ -38,12 +38,6 @@
 
 
     <script>
-        $(document).ready(function()
-        {
-           // $(".bs-sales-modal-lg").modal("show");
-        });
-    </script>
-
     @if (session('alert_error'))
     <script>
         $(document).ready(function()
