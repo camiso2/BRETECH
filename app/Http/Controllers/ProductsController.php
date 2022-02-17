@@ -12,7 +12,7 @@ use App\Producto;
 use App\DetalleOrden;
 use App\User;
 use \PDF;
-use Carbon\Carbon;
+
 
 
 
@@ -169,7 +169,7 @@ class ProductsController extends Controller
         $details->user_id        = $request->user_id;
         $details->save();
         $user  = User::where('id', $request->user_id)->first();
-        //create  pdf whith  invoive
+        //create  pdf with  invoive
         //----------------------------------------------------------------------
         $data = [
             'numberInvoice' => str_replace('No-', '', $request->numberInvoice),
