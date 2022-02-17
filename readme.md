@@ -26,11 +26,11 @@ Tecnologías Usadas
 
 LIBRERIAS EXTERNAS
 <p align="left">
-<a href="https://github.com/Intervention/image#:~:text=Intervention%20Image%20is%20a%20PHP,Facades%20for%20easy%20Laravel%20integration.">Intervention Image</a>
+* <a href="https://github.com/Intervention/image#:~:text=Intervention%20Image%20is%20a%20PHP,Facades%20for%20easy%20Laravel%20integration.">Intervention Image</a>
 </p>
 
 <p align="left">
-<a href="https://github.com/barryvdh/laravel-dompdf">DomPdf</a>
+* <a href="https://github.com/barryvdh/laravel-dompdf">DomPdf</a>
 </p>
 
 Desarrollado
