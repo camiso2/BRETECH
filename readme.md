@@ -1,12 +1,11 @@
-## Sorteo Felipe Segundo (II)
+## Prueba técnica en BREW TECH
 
 
-Sistema desarrollado para prueba técnica en BREW TECH
+Sistema desarrollado  
 
-El sistema busca el registro de participantes que cumplen con los criterios entregados por el cliente. Los participantes deben registrar los datos  
-y subir el recibo de prueba con el que constatan que cumplen con las condiciones para participar en el sorteo realizado por Felipe Segundo (II)
+El sistema busca el registro de productos según preferencias del usuario con fotografía, ventas a clientes  y facturacíon
 
-Requerimientos
+Utilidades
 
 * cantidad Productos eliminados
 * Ventas del día
