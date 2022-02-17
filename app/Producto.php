@@ -52,16 +52,16 @@ class Producto extends Model
             $response = StatusController::notFoundMessage();
         }
         $register = new Producto();
-        $register->nombre = $request->nombre;
+        $register->nombre      = $request->nombre;
         $register->descripcion = $request->descripcion;
-        $register->precio = $request->precio;
-        $register->IVA = $request->IVA;
-        $status = $register->save();
+        $register->precio      = $request->precio;
+        $register->IVA         = $request->IVA;
+        $status                = $register->save();
         if ($status) {
-            $register = Producto::latest('id')->first();
+            $register       = Producto::latest('id')->first();
             $register->foto = $destinationPath . $file_name;
-            $register->SKU = "00" . $register->id;
-            $status = $register->save();
+            $register->SKU  = "00" . $register->id;
+            $status         = $register->save();
             if ($status) {
                 $response = StatusController::successfulMessage(200, 'Successfully created', true, 0, $register);
             } else {
