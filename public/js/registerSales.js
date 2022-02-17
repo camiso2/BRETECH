@@ -14815,7 +14815,7 @@ var userSite = "Administración Web Panel";
       var formData = new FormData();
       for (var key in obj) {
         formData.append(key, obj[key]);
-        console.log(key, obj[key]);
+        //console.log(key, obj[key]);
       }
       return formData;
     },
@@ -15207,7 +15207,6 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
     };
   },
 
-
   methods: {
     deletedOrder: function deletedOrder(orderId) {
       this.totalOrders = this.totalOrders.filter(function (order) {
@@ -15279,7 +15278,6 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                 _context.next = 5;
                 return __WEBPACK_IMPORTED_MODULE_1_axios___default.a.post("api/create", formData).then(function (response) {
                   _this2.preloader = false;
-                  console.log("correct bedroomOccupation : ", response.data.list);
                   _this2.products = response.data.list;
                 }).catch(function (error) {
                   console.log("tenemos errores" + error);

@@ -11,8 +11,9 @@ use App;
 use App\Producto;
 use App\DetalleOrden;
 use App\User;
-use Carbon\Carbon;
 use \PDF;
+use Carbon\Carbon;
+
 
 
 
@@ -121,8 +122,9 @@ class ProductsController extends Controller
     public function destroy(Request $request)
     {
         try {
-            Producto::where('id', $request->id)->update(['deleted_at' => Carbon::now()]);
-            return response()->json($request->id);
+            $product         = new Producto();
+            $response        = $product->deletedProduct($request);
+            return response()->json($response);
         } catch (\Exception $e) {
             Log::info("Error destroy Product:: " . $e->getMessage());
             return $e->getMessage();

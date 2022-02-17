@@ -37,7 +37,6 @@
 <body class="nav-md">
 
 
-    <script>
     @if (session('alert_error'))
     <script>
         $(document).ready(function()
@@ -302,7 +301,7 @@
                                         $("#habilitado"+id).text('Producto desabilitado').css("color", "#d9534f").css("font-weight", "bold");
 
                                     }
-                                    location.reload();
+                                   // location.reload();
                                 },
                                 error:function(){
                                     Swal.fire({
@@ -345,9 +344,18 @@
                                 type:  'post',
                                 beforeSend: function () { },
                                 success:  function (response) {
-                                    //console.log("respuest:."+response);
-                                    var request =JSON.parse(response);
-                                    $("#tr"+request).hide("slow");
+                                    console.log("respuest delete:."+response.success);
+                                   // var request =JSON.parse(response);
+                                   if(response.success){
+                                    $("#tr"+id).hide("slow");
+                                   }else{
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Tenemos un error, intente de nuevo ',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    })
+                                   }
                                 },
                                 error:function(){
                                     Swal.fire({

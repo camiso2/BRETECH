@@ -198,7 +198,6 @@ export default {
       expression: /\w+@\w+\.+[a-z]/,
     };
   },
-
   methods: {
     deletedOrder(orderId) {
       this.totalOrders = this.totalOrders.filter(function (order) {
@@ -270,7 +269,6 @@ export default {
         .post("api/create", formData)
         .then((response) => {
           this.preloader = false;
-          console.log("correct bedroomOccupation : ", response.data.list);
           this.products = response.data.list;
         })
         .catch((error) => {

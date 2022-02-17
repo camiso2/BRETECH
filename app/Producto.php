@@ -9,6 +9,7 @@ use App\Custom\StatusController;
 use DateTime;
 use App\Collection;
 use App\Custom\RandomName;
+use Carbon\Carbon;
 
 class Producto extends Model
 {
@@ -21,6 +22,24 @@ class Producto extends Model
         "precio",
         "IVA",
     ];
+
+
+     /**
+     * simulates delete product
+     *
+     * @param $request
+     */
+    public function DeletedProduct($request)
+    {
+        $data = Producto::where('id', $request->id)->update(['deleted_at' => Carbon::now()]);
+        if($data){
+            $response = StatusController::successfulMessage(200, 'Successfully created', true, 0, $data);
+        }else{
+            $response = StatusController::notFoundMessage();
+        }
+        return $response;
+
+    }
       /**
      * Get all data products
      *

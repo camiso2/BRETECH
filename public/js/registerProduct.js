@@ -14815,7 +14815,7 @@ var userSite = "Administración Web Panel";
       var formData = new FormData();
       for (var key in obj) {
         formData.append(key, obj[key]);
-        console.log(key, obj[key]);
+        //console.log(key, obj[key]);
       }
       return formData;
     },
