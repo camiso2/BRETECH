@@ -22,6 +22,7 @@ Route::group(["middleware" => "apikey.validate"], function () {
     Route::post("destroy", "ProductsController@destroy")->name('destroy');
     Route::post("update", "ProductsController@update")->name('update');
     Route::post("create", "ProductsController@create")->name('create');
+    Route::post("invoicePDF", "ProductsController@invoicePDF")->name('invoicePDF');
 
 });
-Route::post("invoicePDF", "ProductsController@invoicePDF")->name('invoicePDF');
+
