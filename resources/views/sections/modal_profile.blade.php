@@ -10,7 +10,7 @@
             <div class="modal-body" style="text-align: center;">
                 <div class="card">
                     <div class="card-body">
-                        <form method="POST" action="{{ route('modifiqued_data') }}" aria-label="{{ ('Register') }}"
+                        <form method="POST" action="{{ route('modifyDataAdmin') }}" aria-label="{{ ('Register') }}"
                             autocomplete="nope" onsubmit="return preload()">
                             @csrf
                             <input type="hidden" name="id" value="{{ Auth::user()->id }}">

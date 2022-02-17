@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Modify data admin
-Route::post('modifiqued_data', 'HomeController@modifiqued_data')->name('modifiqued_data');
+Route::post('modifyDataAdmin', 'HomeController@modifyDataAdmin')->name('modifyDataAdmin');
 
 
 

@@ -41,7 +41,7 @@ class HomeController extends Controller
         $Yesterday     = DetalleOrden::whereDate('created_at', strtotime(date('Y-m-d') . "- 1 week"))->get()->sum('granTotal');
         return view('home', compact('authenticate', 'listProduct', 'deleted', 'sales', 'Yesterday'));
     }
-    public function  modifiqued_data(Request $request)
+    public function  modifyDataAdmin(Request $request)
     {
         $rules = array(
             'name'                  => 'required|string|max:255',
