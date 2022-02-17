@@ -1,0 +1,21 @@
+.error-segurity{
+	color: red;
+	font-weight: 700;
+	font-size: 11px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(245, 239, 239);
+    color: white;
+    text-align: center;
+ }
+ .center-heigth {
+  margin-top: 10%;
+  }
+
+  .cv{
+      width: 150px;;
+  }
