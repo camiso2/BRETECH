@@ -14,7 +14,7 @@ Utilidades
 * Vender productos
 * Listar Productos
 * Eliminar Productos
-* Deshabilita/Habilitar Productos
+* Deshabilitar/Habilitar Productos
 * Cerrar Sesión
 * Editar datos de administrador
 * Generar factura en pdf
