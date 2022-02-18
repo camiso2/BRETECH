@@ -39,5 +39,5 @@ Desarrollado
 * Jaiver Andrés Ocampo Oviedo
 * Full Stack
 * Contacto : 3174885954
-* Junio de 2021..
+* Febrero de 2022.. 
 
